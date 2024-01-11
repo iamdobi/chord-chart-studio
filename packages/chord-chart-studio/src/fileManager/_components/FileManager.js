@@ -9,6 +9,8 @@ import DeleteConfirmModal from './DeleteConfirmModal';
 import Icon from '../../ui/_components/Icon';
 import FileActions from './FileActions';
 import FileEntry from './FileEntry';
+import html2pdf from 'html2pdf.js';
+
 
 function FileManager(props) {
 	const [isDeleting, setIsDeleting] = useState(false);
@@ -55,7 +57,9 @@ function FileManager(props) {
 					}}
 					printFile={() => {
 						setEditorMode('print');
-						setTimeout(() => window.print(), 0);
+						// setTimeout(() => window.print(), 1000);
+						let e = document.getElementById('i-print-target');
+						html2pdf(e);
 					}}
 				/>
 				<ul className={'fileManager-entriesList'}>

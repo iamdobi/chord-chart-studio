@@ -1,0 +1,7 @@
+node_modules
+build
+.dockerignore
+Dockerfile
+Dockerfile.prod
+packages/**/node_modules
+packages/chord-chart-studio/node_modules

@@ -30,7 +30,7 @@ function PrintPreview(props) {
 	const classNames = ['printPreview', 'cmTheme-print'];
 
 	return (
-		<div className={classNames.join(' ')} data-testid={'printPreview'}>
+		<div id="i-print-target" className={classNames.join(' ')} data-testid={'printPreview'}>
 			<AllPages
 				title={selectedFile.title || ''}
 				allLines={allLines}
